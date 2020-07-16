@@ -1,0 +1,61 @@
+body {
+    margin:0px;
+    font-family: sans-serif;
+    color: black;
+    background-color: white;
+}
+
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    color: darkorange;
+    font-size: 100pt;
+    font-family: 'Indie Flower', cursive;
+}
+
+.block_preview {
+    position: absolute;
+    background-color: red;
+    width: 500px;
+    height: 100px;
+    top: 30%;
+    left: 10%;
+    border-radius: 5%;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 50pt;
+    color: white;
+}
+
+.test_block {
+    position: absolute;
+    background-color: red;
+    width: 500px;
+    height: 100px;
+    top: 30%;
+    left: 10%;
+    border-radius: 5%;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 50pt;
+    color: white;
+}
+
+#real_stream {
+  border-radius: 10px;
+  border: 20px solid red;
+  display: block;
+  margin-left: 5%;
+  margin-top: 60px;
+  width: 40%;
+}
+
+#fake_stream {
+  border-radius: 10px;
+  border: 20px solid green;
+  display: inline-block;
+  margin-left: 50%;
+  margin-top: -617px;
+  width: 40%;
+}
+

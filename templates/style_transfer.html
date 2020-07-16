@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h1> Style Transfer </h1>
+
+
+<img id="real_stream" src="{{ url_for('real_video_feed') }}"><img id="fake_stream" src="{{ url_for('style_video_feed') }}">
+
+
+
+{% endblock %}
