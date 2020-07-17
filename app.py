@@ -6,7 +6,7 @@ video_stream = Webcam()
 
 @app.route('/')
 def index():
-    return render_template('style_transfer.html')
+    return render_template('index.html')
 
 def generate_image(camera):
     while True:
@@ -14,7 +14,6 @@ def generate_image(camera):
             frame = camera.get_frame()
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
-
         except: pass
 
 def generate_styled_image(camera):
@@ -24,6 +23,10 @@ def generate_styled_image(camera):
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
         except: pass
+
+@app.route('/style_transfer')
+def style_transfer():
+    return render_template('style_transfer.html')
 
 @app.route('/real_video_feed')
 #Return the generated frames

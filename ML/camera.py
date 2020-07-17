@@ -14,7 +14,7 @@ class Webcam():
     path_to_weights = os.path.join(script_path, "models", weights_fname)
     resolution = (640, 480)
     # Change to GPU if desired
-    device = torch.device("cuda")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = TransformerNet()
     with torch.no_grad():
         state_dict = torch.load(path_to_weights)
